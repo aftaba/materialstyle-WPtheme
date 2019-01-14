@@ -1,0 +1,539 @@
+/*
+Theme Name: Material Style
+Theme URI: https://materialstyle.io/wp-theme/material-style
+Author: Aftab Alam
+Author URI: https://aftabablog.wordpress.com
+Description: Material Style themes helps your Wordpress site to use Material Style design.
+Version: 1.0.0
+Text Domain: materialstyle
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+.bg-sliver-light {
+    background-color: #f5f5f5;
+}
+.header {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.12);
+    -webkit-transition: background .2s ease-in-out,padding .2s ease-in-out;
+    -o-transition: background .2s ease-in-out,padding .2s ease-in-out;
+    transition: background .2s ease-in-out,padding .2s ease-in-out;
+    position: absolute;
+    width: 100%;
+    z-index: 7;
+    padding: 0.5rem 1rem;
+
+}
+.header.sticky {
+    padding: 0.3rem 1rem;
+}
+.header .navbar-brand img {
+    max-width: 100px;
+}
+.header .navbar .navbar-nav li a  {
+    color: #444;
+}
+.header .navbar .navbar-nav div.dropdown-menu {
+    top: calc(100% + 12px);
+}
+.banner {
+    background: url('img/where-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 570px;
+    position: relative;
+}
+.banner::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.header .navbar {
+    padding: 0px;
+}
+.header .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.z-index-2 {
+    z-index: 2;
+    position: relative;
+}
+.left-section-wrapper .btn-ms {
+    background-color: #fff!important;
+    border: none;
+    padding: 9px 36px!important;
+    text-transform: capitalize;
+    margin-top: 13px;
+    font-weight: normal;
+}
+
+.left-section-wrapper {
+    padding-top: 15%;
+}
+.left-section-wrapper h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 300;
+}
+.blog-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.btn-double-arrow i {
+    position: relative;
+}
+.btn-double-arrow i:first-of-type {
+    right: 10px;
+}
+.btn-double-arrow i:last-of-type {
+    right: 27px;
+}
+.card-custom .card-date {
+    color: #0277BD;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.card-img-top {
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+}
+.custom-card-right .card-header {
+    padding: 0px;
+    border-bottom: 0px;
+    box-shadow: 0px 1px 15px #ccc;
+}
+.custom-card-right .card-header .ms-tabs {
+    border-bottom: 0px;
+}
+.custom-card-right .card-header .ms-tabs li a i {
+    font-size: 15px;
+    position: relative;
+    top: 2px;
+    right: 3px;
+}
+.custom-card-right .card-header .ms-tabs .nav-item .nav-link.active {
+   color: #000;
+   transition:all 0.5s ease;
+}
+.custom-card-right .card-header .ms-tabs .active-indicator {
+    height: 6px;
+   
+}
+.custom-card-right .card-header .ms-tabs .nav-item:nth-of-type(1) a {
+    border-top-right-radius: 0px;
+}
+.custom-card-right .card-header .ms-tabs .nav-item:nth-of-type(2) a {
+    border-top-left-radius: 0px;
+}
+.custom-card-right .card-body .tab-content .tab-pane ul {
+    padding-left: 0px;
+    list-style: none;
+    float: left;
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+    transition-duration: 0.50s;
+}
+.custom-card-right .card-body .tab-content .tab-pane ul:hover {
+    background-color: #f4f4f4;
+    box-shadow: 1px 2px 3px #e7e7e7;
+}
+.custom-card-right .card-body .tab-content .tab-pane ul li:first-of-type {
+    float: left;
+    margin-right: 15px;
+}
+.custom-card-right .card-body .tab-content .tab-pane ul li:last-of-type {
+    float: left;
+    width: calc(100% - 75px);
+}
+.custom-card-right .card-body .tab-content .tab-pane ul li:last-of-type h4 {
+    padding-top: 5px;
+    min-height: 40px;
+}
+.custom-card-right .card-body .tab-content .tab-pane ul li:last-of-type h4 a {
+    color: #444;
+    text-decoration: none;
+}
+.custom-card-right .card-body .tab-content .tab-pane ul li:last-of-type p.small {
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+.width-full {
+    width: 100%;
+}
+
+.heart-custom .heart, .remove-border-heart.heart-custom .remove-click {
+    display: none;
+}
+.heart {
+    color: red;
+}
+.remove-border-heart.heart-custom .heart {
+    display: block;
+}
+.card-custom .hided-alert {
+    position: absolute;
+    right: -2%;
+    font-size: 13px;
+    padding: 10px;
+    bottom: 30px;
+    display: none;
+}
+.card-custom .card-img-top a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.card-custom .card-img-top::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+    transform: scale(0);
+}
+
+.card-custom .card-img-top a::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    bottom: 35px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    right: 50px;
+    left: 50px;
+    transform: scale(1,0);
+    transition: all .4s linear 0s;
+    z-index: 6;
+}
+
+.card-custom .card-img-top a::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    right: 20px;
+    left: 20px;
+    transform: scale(0,1);
+    transition: all .4s linear 0s;
+    z-index: 6;
+}
+.card-custom .card-img-top:hover::before, .card-custom .card-img-top a:hover::before, .card-custom .card-img-top a:hover::after {
+    transform: scale(1);
+}
+.footer-inner, .footer-bottom {
+    padding: 30px 0px;
+    color: #fff;
+}
+.footer-bottom {
+    padding: 10px 0px;
+}
+.footer-inner h4.heading {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.footer-inner address {
+    font-size: 14px;
+    color: #e1e1e1;
+}
+footer hr {
+    border-top-color: #474242;
+}
+footer ul {
+    padding-left: 0px;
+    list-style: none;
+}
+footer ul li a {
+    color: #e1e1e1;
+    transition-duration: 0.5s;
+    margin-bottom: 13px;
+    display: block;
+    font-size: 14px;
+}
+footer ul li a:hover {
+    text-decoration: none;
+    color: #a6a3a3;
+}
+footer .footer-top .btn-outline-indigo {
+    border-color: #fff!important;
+    color: #fff!important;
+    font-weight: normal;
+    letter-spacing: 1px;
+    border-width: 1.5px;
+    padding: 6px 17px;
+}
+footer .footer-top .btn-outline-indigo .ink {
+    background-color: #fff!important;
+}
+.font-14 {
+    font-size: 14px;
+}
+/* inner page css starts here */
+.inner-page-banner {
+    background-image: url('https://cdn.pixabay.com/photo/2018/03/21/10/00/aerial-3246120_1280.jpg');
+}
+.inner-page-banner h2 {
+    color:#fff;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+.date-wrapper {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    border: 2px solid #fff;
+}
+.date-day {
+    font-size: 1.5em;
+}
+.inner-form button .material-icons {
+    font-size: 17px;
+}
+.inner-form button {
+    padding: 9px 22px;
+}
+form .floating-label {
+    position: relative;
+    bottom: 3px;
+}
+.banner-list {
+    list-style: none;
+}
+.banner-list li {
+    display: inline-block;
+    color: #fff;
+    padding-right: 15px;
+}
+.banner-list li::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    left: 5px;
+    position: relative;
+    bottom: 2px;
+}
+.banner-list li:last-of-type::after {
+    display: none;
+}
+.banner-list li a {
+    color: inherit;
+}
+
+/*search bar css here */
+.container-search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 71px;
+}
+.container-search .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background: #000;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+.container-search .search:hover {
+  cursor: pointer;
+}
+.container-search .search::before {
+   
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 13px;
+    right: 0;
+    bottom: 0;
+    left: 13px;
+    width: 9px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all .5s;
+}
+.container-search .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -2px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all .5s;
+}
+.container-search input {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 35px;
+  outline: none;
+  border: none;
+  background: #2196f3;
+  color: #fff;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 9px 0 #2196f3, 0 11px 19px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  letter-spacing: 0.1em;
+font-size: 14px;
+}
+.container-search input:hover {
+  cursor: pointer;
+}
+.container-search input:focus {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+}
+.container-search input:focus ~ .search {
+  right: -256px;
+  background: #151515;
+  z-index: 6;
+}
+.container-search input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 20px;
+}
+.container-search input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.container-search input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.banner-list {
+    padding-left: 0px;
+}
+
+/*responsive css here */
+
+@media (max-width:991px) {
+    header.header {
+        z-index: 10000;
+       
+    }
+    header.header .navbar-collapse {
+        padding-bottom: 30px;
+    }
+    .header .navbar .navbar-nav {
+        margin-left: 0px!important;
+    }
+}
+@media (max-width:768px) {
+    .left-section-wrapper {
+        padding-top: 26%;
+    }
+    .mt-5-sm {
+        margin-top: 3rem !important;
+    }
+}
+@media (max-width:575px) {
+    .author-body img.img-thumbnail {
+        margin-bottom:20px;
+    }
+    .inner-page-banner h2 {
+        font-size: 2rem;
+    }
+}
+@media (max-width:481px) {
+    .left-section-wrapper h1 {
+        font-size: 3rem;
+    }
+    .left-section-wrapper {
+        padding-top: 51%;
+    }
+    .banner-list li {
+        padding-right: 8px;
+        font-size: 14px;
+    }
+    .banner-list li::after {
+        left: 3px;
+    }
+}
+@media (max-width:430px) { 
+    .inner-page-banner h2 {
+        font-size: 1.6rem;
+    }
+    .banner-list li {
+        padding-right: 5px;
+        font-size: 12px;
+    }
+}
